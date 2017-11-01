@@ -164,7 +164,7 @@ function draw() {
 						currCity = Math.round(random(0,20));
 						//console.log(currCity);
 						//console.log(cities[currCity]);
-						loadJSON("http://api.openweathermap.org/data/2.5/weather?q="
+						loadJSON("https://api.openweathermap.org/data/2.5/weather?q="
 					 + cities[currCity] +
 					 "&appid=d21e79452f4461671f1ccf2a209d48c3", jsonLoaded);
  //console.log(currnote);
