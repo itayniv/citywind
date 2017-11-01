@@ -45,8 +45,8 @@ var particles = [];
 var tiles = [];
 var pushers = [];
 var drops = [];
-var cities = ['Manchester','tel aviv','istanbul', 'gaza','haifa',
-,'baltimore', 'Kochi', 'Taipei', 'Juneau', 'Cologne',
+var cities = ['Manchester','tel aviv','istanbul', 'gaza'
+, 'Vancouver', 'Juneau', 'Cologne',
 'Glasgow', 'Tokyo', 'Amsterdam', 'Seattle', 'Brussels',
 'Hong Kong', 'New York', 'Bergen', 'New Orleans',
 'Singapore', 'Vancouver', 'Kirkwall','jerusalem'	, 'osaka', 'london','barcelona'];
@@ -109,7 +109,7 @@ function draw() {
 			drops[i].dirr = mappedwind;
 		}
 
-	console.log(mappedwind);
+	//console.log(mappedwind);
 
 
 	noteWidth = (w/7);
@@ -155,19 +155,16 @@ function draw() {
 					tiles[i].opacity = 255;
 					//console.log("Tile number " + (i+1) + " was hit");
 					tiles[i].shouldDraw = false;
-					// currCity = Math.round(random(0,17));
-					// //console.log(currCity);
-					// console.log(cities[currCity]);
-					//osc.freq(notefq*(tiles[i]*100));
+
 
 					if ( (speedY > 0) && (y >= height-DimX/2) ){
-						currCity = Math.round(random(0,23));
-						//console.log(currCity);
-						//console.log(cities[currCity]);
+						currCity = Math.round(random(0,4));
+						console.log(currCity);
+						console.log(cities[currCity]);
 						loadJSON("https://api.openweathermap.org/data/2.5/weather?q="
 					 + cities[currCity] +
 					 "&appid=d21e79452f4461671f1ccf2a209d48c3", jsonLoaded);
- //console.log(currnote);
+
 							// ramp amplitude to 0.5 over 0.1 seconds
 								if (currnote == 1){
 									osc.freq(261.626);
