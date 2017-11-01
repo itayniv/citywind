@@ -161,7 +161,7 @@ function draw() {
 					//osc.freq(notefq*(tiles[i]*100));
 
 					if ( (speedY > 0) && (y >= height-DimX/2) ){
-						currCity = Math.round(random(0,24));
+						currCity = Math.round(random(0,23));
 						//console.log(currCity);
 						//console.log(cities[currCity]);
 						loadJSON("https://api.openweathermap.org/data/2.5/weather?q="
