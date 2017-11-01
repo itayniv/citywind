@@ -49,7 +49,7 @@ var cities = ['Manchester','tel aviv','istanbul', 'gaza','haifa',
 ,'baltimore', 'Kochi', 'Taipei', 'Juneau', 'Cologne',
 'Glasgow', 'Tokyo', 'Amsterdam', 'Seattle', 'Brussels',
 'Hong Kong', 'New York', 'Bergen', 'New Orleans',
-'Singapore', 'Vancouver', 'Mobile', 'Kirkwall','jerusalem'	, 'osaka', 'hiroshima', 'london','barcelona'];
+'Singapore', 'Vancouver', 'Kirkwall','jerusalem'	, 'osaka', 'london','barcelona'];
 
 var opacity = 255;
 
@@ -161,7 +161,7 @@ function draw() {
 					//osc.freq(notefq*(tiles[i]*100));
 
 					if ( (speedY > 0) && (y >= height-DimX/2) ){
-						currCity = Math.round(random(0,20));
+						currCity = Math.round(random(0,24));
 						//console.log(currCity);
 						//console.log(cities[currCity]);
 						loadJSON("https://api.openweathermap.org/data/2.5/weather?q="
